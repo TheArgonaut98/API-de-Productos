@@ -1,10 +1,10 @@
-# 🛒 API RESTful de Productos
+# API RESTful de Productos
 
 API RESTful construida con **Node.js** y **Express** que permite gestionar un catálogo de productos mediante operaciones CRUD completas. Los datos se almacenan en memoria usando un array en JavaScript, sin necesidad de base de datos.
 
 ---
 
-## 📁 Estructura del proyecto
+## Estructura del proyecto
 
 ```
 api-productos/
@@ -17,7 +17,7 @@ api-productos/
 
 ---
 
-## ⚙️ Instalación y ejecución
+## Instalación y ejecución
 
 ### Requisitos previos
 - Node.js v18 o superior instalado
@@ -41,11 +41,9 @@ npm start
 
 El servidor quedará corriendo en: `http://localhost:3000`
 
-> Para desarrollo con recarga automática: `npm run dev` (requiere nodemon, instalado como dev dependency)
-
 ---
 
-## 🔗 Endpoints disponibles
+## Endpoints disponibles
 
 | Método | Ruta              | Descripción                   |
 |--------|-------------------|-------------------------------|
