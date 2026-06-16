@@ -1,4 +1,3 @@
-// Almacenamiento en memoria: simula una base de datos con un array
 const productos = [
   { id: 1, nombre: "Laptop Lenovo IdeaPad", precio: 599990, categoria: "Tecnología" },
   { id: 2, nombre: "Mouse Inalámbrico Logitech", precio: 24990, categoria: "Tecnología" },
