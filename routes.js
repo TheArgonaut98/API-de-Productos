@@ -36,7 +36,6 @@ router.get("/:id", (req, res) => {
 router.post("/", (req, res) => {
   const { nombre, precio, categoria } = req.body;
 
-  // Validación: campos obligatorios presentes
   if (!nombre || precio === undefined || !categoria) {
     return res.status(400).json({
       ok: false,
@@ -44,7 +43,6 @@ router.post("/", (req, res) => {
     });
   }
 
-  // Validación: nombre debe ser string no vacío
   if (typeof nombre !== "string" || nombre.trim() === "") {
     return res.status(400).json({
       ok: false,
@@ -52,7 +50,6 @@ router.post("/", (req, res) => {
     });
   }
 
-  // Validación: precio debe ser número positivo
   if (typeof precio !== "number" || precio < 0) {
     return res.status(400).json({
       ok: false,
@@ -60,7 +57,6 @@ router.post("/", (req, res) => {
     });
   }
 
-  // Validación: categoria debe ser string no vacío
   if (typeof categoria !== "string" || categoria.trim() === "") {
     return res.status(400).json({
       ok: false,
@@ -100,7 +96,6 @@ router.put("/:id", (req, res) => {
 
   const { nombre, precio, categoria } = req.body;
 
-  // Validación: al menos un campo debe venir para actualizar
   if (!nombre && precio === undefined && !categoria) {
     return res.status(400).json({
       ok: false,
@@ -108,7 +103,6 @@ router.put("/:id", (req, res) => {
     });
   }
 
-  // Validación de tipos si los campos están presentes
   if (nombre !== undefined) {
     if (typeof nombre !== "string" || nombre.trim() === "") {
       return res.status(400).json({
@@ -136,7 +130,6 @@ router.put("/:id", (req, res) => {
     }
   }
 
-  // Actualizar solo los campos recibidos (actualización parcial)
   const productoActualizado = {
     ...productos[indice],
     ...(nombre && { nombre: nombre.trim() }),
